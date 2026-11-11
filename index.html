@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Desi Celiac</title>
+<meta name="description" content="The Desi Celiac — gluten free food in India, without the guesswork. Restaurant reviews, recipes, memes and brand collabs from Delhi.">
+<meta property="og:title" content="The Desi Celiac | Gluten Free India">
+<meta property="og:description" content="Living with celiac since '91. Gluten free food, without the guesswork!">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FFF6E9;
+    --paper:#FFFDF8;
+    --ink:#1B1B1B;
+    --chili:#E3562A;
+    --haldi:#F4AE1A;
+    --navy:#26305A;
+    --plate:#A9DCE0;
+    --rose:#F6B8B0;
+    --leaf:#3E8E5A;
+    --muted:#5c5348;
+    --radius:22px;
+    --shadow:5px 5px 0 var(--ink);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Space Grotesk",system-ui,sans-serif;
+    font-size:17px;line-height:1.55;
+    overflow-x:hidden;
+  }
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+  h1,h2,h3{font-family:"Anton",Impact,sans-serif;font-weight:400;letter-spacing:.5px;line-height:1.02;text-transform:uppercase}
+  .scribble{font-family:"Caveat",cursive;font-weight:700;color:var(--chili);font-size:1.6rem;line-height:1.1}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5em;
+    font:700 1rem/1 "Space Grotesk",sans-serif;
+    padding:15px 22px;border:2.5px solid var(--ink);border-radius:999px;
+    background:var(--haldi);color:var(--ink);text-decoration:none;cursor:pointer;
+    box-shadow:var(--shadow);transition:transform .15s, box-shadow .15s;
+  }
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+  .btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+  .btn.dark{background:var(--ink);color:var(--cream)}
+  .btn.chili{background:var(--chili);color:#fff}
+  .card{background:var(--paper);border:2.5px solid var(--ink);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cream) 88%,transparent);backdrop-filter:blur(8px);border-bottom:2.5px solid var(--ink)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .brand svg{width:46px;height:46px}
+  .brand b{font-family:"Anton",sans-serif;font-weight:400;font-size:1.25rem;letter-spacing:.5px;text-transform:uppercase}
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-links a.txt{text-decoration:none;font-weight:600;padding:8px 12px;border-radius:999px}
+  .nav-links a.txt:hover{background:var(--haldi)}
+  .nav-links .btn{padding:11px 18px;box-shadow:3px 3px 0 var(--ink)}
+  .nav-links .btn{white-space:nowrap}
+  @media (max-width:760px){.nav-links a.txt{display:none}.brand b{font-size:1.05rem;line-height:1}.nav-links .btn{padding:10px 14px;font-size:.92rem}}
+  @media (max-width:400px){.brand b{font-size:.95rem}.brand svg{width:40px;height:40px}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:56px 0 70px;position:relative}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .tag{display:inline-block;background:var(--ink);color:var(--cream);font-weight:700;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase;padding:7px 14px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:clamp(3rem,8.5vw,6.4rem)}
+  .hero h1 .no{color:var(--chili);position:relative;display:inline-block}
+  .hero h1 .no::after{content:"";position:absolute;left:-4%;right:-4%;top:52%;height:.12em;background:var(--ink);transform:rotate(-4deg);border-radius:4px}
+  .hero h1 .yes{background:var(--haldi);padding:0 .12em;border:3px solid var(--ink);border-radius:12px;display:inline-block;transform:rotate(-2deg)}
+  .hero p.lede{font-size:1.2rem;max-width:34ch;margin:22px 0 28px;color:var(--muted)}
+  .hero p.lede strong{color:var(--ink)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px}
+
+  .plate-zone{position:relative;aspect-ratio:1;max-width:440px;width:100%;margin-inline:auto}
+  .plate{
+    position:absolute;inset:8%;border-radius:50%;
+    border:3px solid var(--ink);
+    background:
+      radial-gradient(circle at 50% 50%, var(--paper) 0 52%, transparent 52.5%),
+      radial-gradient(circle at 20% 25%, var(--rose) 0 7%, transparent 7.5%),
+      radial-gradient(circle at 78% 22%, var(--plate) 0 9%, transparent 9.5%),
+      radial-gradient(circle at 84% 72%, var(--rose) 0 8%, transparent 8.5%),
+      radial-gradient(circle at 22% 80%, var(--plate) 0 10%, transparent 10.5%),
+      radial-gradient(circle at 50% 8%, var(--haldi) 0 4%, transparent 4.5%),
+      radial-gradient(circle at 50% 93%, var(--haldi) 0 4%, transparent 4.5%),
+      #E7F5F6;
+    box-shadow:8px 8px 0 var(--ink);
+    display:grid;place-items:center;
+  }
+  .plate .food{font-size:clamp(4rem,12vw,7rem);animation:wobble 4s ease-in-out infinite;filter:drop-shadow(3px 3px 0 rgba(0,0,0,.15))}
+  @keyframes wobble{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) scale(1.05)}}
+  .sticker{
+    position:absolute;font-weight:700;font-size:.92rem;line-height:1.15;text-align:center;
+    background:var(--paper);border:2.5px solid var(--ink);border-radius:14px;padding:9px 13px;
+    box-shadow:3px 3px 0 var(--ink);white-space:nowrap;
+    animation:float 5s ease-in-out infinite;
+  }
+  .sticker.s1{top:2%;left:-4%;transform:rotate(-8deg);background:var(--haldi)}
+  .sticker.s2{top:16%;right:-6%;transform:rotate(7deg);animation-delay:-1.5s}
+  .sticker.s3{bottom:12%;left:-8%;transform:rotate(5deg);background:var(--plate);animation-delay:-3s}
+  .sticker.s4{bottom:0;right:2%;transform:rotate(-5deg);background:var(--chili);color:#fff;animation-delay:-2s}
+  @keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr}
+    .plate-zone{max-width:340px}
+    .sticker{font-size:.8rem;padding:7px 10px}
+    .sticker.s1{left:0}.sticker.s2{right:0}.sticker.s3{left:0}
+  }
+
+  /* ---------- marquee ---------- */
+  .marquee{background:var(--ink);color:var(--cream);border-block:2.5px solid var(--ink);overflow:hidden;transform:rotate(-1.5deg);margin:10px -10px}
+  .marquee .track{display:flex;width:max-content;animation:scroll 32s linear infinite}
+  .marquee span{font-family:"Anton",sans-serif;font-size:1.5rem;text-transform:uppercase;letter-spacing:1px;padding:14px 0;white-space:nowrap}
+  .marquee span i{font-style:normal;color:var(--haldi);margin:0 22px}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  section{padding:84px 0}
+  .section-head{max-width:640px;margin-bottom:40px}
+  .section-head h2{font-size:clamp(2.3rem,5.5vw,3.8rem)}
+  .section-head p{color:var(--muted);margin-top:12px;font-size:1.1rem}
+
+  /* ---------- about + pie ---------- */
+  .about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+  .about-text p{margin-top:16px;font-size:1.1rem}
+  .about-text p:first-of-type{margin-top:18px}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .facts span{border:2px solid var(--ink);border-radius:999px;padding:6px 14px;font-weight:600;background:var(--paper)}
+  .pie-card{padding:30px 26px;text-align:center;transform:rotate(1.5deg)}
+  .pie-card h3{font-size:1.9rem}
+  .pie-card .sub{font-style:italic;color:var(--muted);font-size:.95rem;margin:4px 0 22px}
+  .pie{
+    width:min(240px,70%);aspect-ratio:1;margin:0 auto;border-radius:50%;border:3px solid var(--ink);
+    background:conic-gradient(var(--chili) 0 calc(var(--p,0) * 70%), var(--haldi) 0 calc(var(--p,0) * 90%), var(--navy) 0 calc(var(--p,0) * 100%), #eee 0);
+    transition:--p 1.6s;
+  }
+  @property --p{syntax:"<number>";inherits:false;initial-value:0}
+  .pie.go{--p:1}
+  .legend{list-style:none;text-align:left;margin:24px auto 0;max-width:320px;display:grid;gap:8px}
+  .legend li{display:flex;gap:10px;align-items:center;font-weight:500}
+  .legend b{font-family:"Anton",sans-serif;font-weight:400;font-size:1.2rem;min-width:46px}
+  .legend i{width:16px;height:16px;border-radius:4px;border:2px solid var(--ink);flex:none}
+  @media (max-width:860px){.about .wrap{grid-template-columns:1fr}}
+
+  /* ---------- what I do ---------- */
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .do{padding:26px 22px;transition:transform .2s}
+  .do:nth-child(odd){transform:rotate(-1.2deg)}
+  .do:nth-child(even){transform:rotate(1.2deg)}
+  .do:hover{transform:rotate(0) translateY(-6px)}
+  .do .emo{font-size:2.6rem;width:72px;height:72px;display:grid;place-items:center;border-radius:50%;border:2.5px solid var(--ink);margin-bottom:16px}
+  .do h3{font-size:1.6rem;margin-bottom:8px}
+  .do p{color:var(--muted);font-size:.98rem}
+  @media (max-width:960px){.grid4{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.grid4{grid-template-columns:1fr}}
+
+  /* ---------- quiz ---------- */
+  .quiz-sec{background:var(--haldi);border-block:2.5px solid var(--ink)}
+  .quiz-sec .section-head p{color:var(--ink)}
+  .quiz{max-width:640px;margin:0 auto;padding:34px 28px;text-align:center}
+  .q-top{display:flex;justify-content:space-between;font-weight:700;font-size:.95rem;margin-bottom:20px}
+  .q-food{font-size:5rem;line-height:1;margin-bottom:10px}
+  .q-name{font-family:"Anton",sans-serif;font-size:2.4rem;text-transform:uppercase}
+  .q-hint{color:var(--muted);margin-bottom:24px}
+  .q-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+  .q-btns .btn{box-shadow:3px 3px 0 var(--ink);padding:13px 18px}
+  .q-btns .btn.safe{background:#BFE8C7}
+  .q-btns .btn.risky{background:#FFE7A3}
+  .q-btns .btn.gluten{background:#FFC2B0}
+  .q-btns .btn[disabled]{opacity:.45;pointer-events:none}
+  .q-result{margin-top:22px;padding:18px;border-radius:16px;border:2.5px dashed var(--ink);text-align:left;display:none}
+  .q-result.show{display:block;animation:pop .35s}
+  .q-result h4{font-family:"Anton",sans-serif;font-weight:400;font-size:1.5rem;text-transform:uppercase;margin-bottom:6px}
+  .q-next{margin-top:16px}
+  @keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+
+  /* ---------- myths ---------- */
+  .flips{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .flip{perspective:900px;height:250px;cursor:pointer;background:none;border:0;font:inherit;color:inherit;text-align:left}
+  .flip .inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+  .flip.on .inner{transform:rotateY(180deg)}
+  .flip .face{position:absolute;inset:0;backface-visibility:hidden;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border:2.5px solid var(--ink);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .flip .front{background:var(--paper)}
+  .flip .back{background:var(--navy);color:var(--cream);transform:rotateY(180deg)}
+  .flip .lbl{font-weight:700;font-size:.8rem;letter-spacing:1.5px;text-transform:uppercase}
+  .flip .front .lbl{color:var(--chili)}
+  .flip .back .lbl{color:var(--haldi)}
+  .flip q{font-family:"Anton",sans-serif;font-size:1.65rem;line-height:1.1;text-transform:uppercase;quotes:"“" "”"}
+  .flip .back p{font-size:1rem}
+  .flip small{font-weight:600;opacity:.6}
+  @media (max-width:860px){.flips{grid-template-columns:1fr}}
+
+  /* ---------- contact ---------- */
+  .contact{background:var(--ink);color:var(--cream)}
+  .contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+  .contact h2{font-size:clamp(2.6rem,6vw,4.4rem);color:var(--cream)}
+  .contact h2 span{color:var(--haldi)}
+  .contact .intro p{color:#d8cfc3;margin-top:16px;font-size:1.1rem}
+  .who{list-style:none;margin-top:24px;display:grid;gap:12px}
+  .who li{display:flex;gap:12px;align-items:flex-start}
+  .who li span{font-size:1.5rem;line-height:1.2}
+  .who b{color:var(--cream)}
+  .who p{color:#d8cfc3;font-size:.98rem}
+  .direct{margin-top:26px;font-size:.98rem;color:#d8cfc3}
+  .direct-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+  .pill{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-weight:700;color:var(--cream);border:2px solid var(--cream);border-radius:999px;padding:9px 14px;font-size:.95rem;transition:background .15s,color .15s;overflow-wrap:anywhere}
+  .pill:hover{background:var(--cream);color:var(--ink)}
+  .pill.wa{background:#25D366;border-color:#25D366;color:var(--ink)}
+  .pill.wa:hover{background:var(--haldi);border-color:var(--haldi)}
+  form.card{color:var(--ink);padding:30px 26px;box-shadow:7px 7px 0 var(--haldi);border-color:var(--cream)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+  .field label{font-weight:700;font-size:.92rem}
+  .field label em{font-style:normal;color:var(--muted);font-weight:500}
+  input,select,textarea{
+    font:500 1rem "Space Grotesk",sans-serif;color:var(--ink);
+    padding:13px 14px;border:2.5px solid var(--ink);border-radius:14px;background:var(--cream);width:100%;
+  }
+  textarea{min-height:130px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;box-shadow:3px 3px 0 var(--chili);background:#fff}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips input{position:absolute;opacity:0;pointer-events:none}
+  .chips label{border:2.5px solid var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer;font-weight:600;font-size:.95rem;background:var(--cream);transition:background .15s, transform .15s}
+  .chips input:checked + label{background:var(--haldi);transform:rotate(-2deg);box-shadow:2px 2px 0 var(--ink)}
+  .chips input:focus-visible + label{outline:3px solid var(--chili);outline-offset:2px}
+  .hp{position:absolute;left:-9999px}
+  form .btn{width:100%;justify-content:center;font-size:1.1rem;padding:17px}
+  .form-note{font-size:.85rem;color:var(--muted);text-align:center;margin-top:12px}
+  .form-status{display:none;margin-top:14px;padding:14px;border-radius:14px;font-weight:600;text-align:center}
+  .form-status.ok{display:block;background:#BFE8C7;border:2.5px solid var(--ink)}
+  .form-status.err{display:block;background:#FFC2B0;border:2.5px solid var(--ink)}
+  @media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+  @media (max-width:520px){.row2{grid-template-columns:1fr;gap:0}}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--chili);color:#fff;border-top:2.5px solid var(--ink);padding:40px 0}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:18px}
+  footer .big{font-family:"Anton",sans-serif;font-size:1.8rem;text-transform:uppercase}
+  footer a{color:#fff;font-weight:700}
+  footer small{display:block;opacity:.85;margin-top:4px}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s, transform .7s}
+  .reveal.in{opacity:1;transform:none}
+
+  .confetti{position:fixed;top:-40px;font-size:1.8rem;pointer-events:none;z-index:99;animation:fall linear forwards}
+  @keyframes fall{to{transform:translateY(110vh) rotate(540deg)}}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- Logo badge (swap for your real logo: replace this <symbol> or use <img src="logo.png">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="badge" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="44" fill="#1B1B1B"/>
+    <circle cx="50" cy="50" r="45" fill="none" stroke="#1B1B1B" stroke-width="7" stroke-dasharray="0.1 6.2" stroke-linecap="round"/>
+    <circle cx="50" cy="50" r="37" fill="none" stroke="#FFF6E9" stroke-width="1.6"/>
+    <text x="50" y="28" text-anchor="middle" fill="#FFF6E9" font-size="7">★ ★ ★</text>
+    <text x="50" y="38" text-anchor="middle" fill="#FFF6E9" font-family="Anton,Impact,sans-serif" font-size="9">THE</text>
+    <rect x="17" y="42" width="66" height="18" fill="#FFF6E9"/>
+    <text x="50" y="57.5" text-anchor="middle" fill="#1B1B1B" font-family="Anton,Impact,sans-serif" font-size="16" letter-spacing="1">DESI</text>
+    <text x="50" y="73" text-anchor="middle" fill="#FFF6E9" font-family="Anton,Impact,sans-serif" font-size="10" letter-spacing="1">CELIAC</text>
+  </symbol>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="The Desi Celiac home">
+      <svg><use href="#badge"/></svg>
+      <b>The Desi Celiac</b>
+    </a>
+    <div class="nav-links">
+      <a class="txt" href="#about">About</a>
+      <a class="txt" href="#quiz">Quiz</a>
+      <a class="txt" href="#myths">Myths</a>
+      <a class="btn chili" href="#contact">Work with me ✉️</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag">🌾🚫 Gluten Free India</span>
+      <h1>Roti? <span class="no">Nahi.</span><br>Dosa? <span class="yes">Haan!</span></h1>
+      <p class="lede"><strong>Gluten free food, without the guesswork.</strong> Restaurant reviews, home-cooked desi food and very relatable memes from a Delhi celiac who's been doing this since '91.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://www.instagram.com/thedesiceliac/" target="_blank" rel="noopener">📸 Follow @thedesiceliac</a>
+        <a class="btn dark" href="#contact">Drop a message →</a>
+      </div>
+    </div>
+    <div class="plate-zone" aria-hidden="true">
+      <div class="plate"><div class="food" id="plateFood">🍛</div></div>
+      <div class="sticker s1">Celiac since '91 ✨</div>
+      <div class="sticker s2">📍 Delhi, India</div>
+      <div class="sticker s3">Fryer interrogator 🕵️</div>
+      <div class="sticker s4">100% gluten-free plate</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>No gluten<i>✦</i>No guesswork<i>✦</i>Is the fryer shared?<i>✦</i>Hing has wheat, bhai<i>✦</i>Dhokla supremacy<i>✦</i>It's not a fad diet<i>✦</i>Separate tawa please<i>✦</i></span>
+    <span>No gluten<i>✦</i>No guesswork<i>✦</i>Is the fryer shared?<i>✦</i>Hing has wheat, bhai<i>✦</i>Dhokla supremacy<i>✦</i>It's not a fad diet<i>✦</i>Separate tawa please<i>✦</i></span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-text reveal">
+      <p class="scribble">hi, namaste, hello 👋</p>
+      <h2 style="font-size:clamp(2.3rem,5.5vw,3.8rem)">Being celiac in a land of <span style="color:var(--chili)">parathas</span></h2>
+      <p>Celiac disease means even a crumb of gluten is a no. That's tough in a country where wheat turns up in everything from rotis to the hing in your dal.</p>
+      <p>I've lived with it since 1991, so I've asked every question a waiter can be asked. Here I share what's actually safe to eat out in India, what I cook at home, and memes for when it all gets a bit much.</p>
+      <div class="facts">
+        <span>🍽️ Restaurant reviews</span><span>🥘 Desi GF recipes</span><span>😂 Memes</span><span>🛡️ Precautions</span>
+      </div>
+    </div>
+    <div class="card pie-card reveal">
+      <h3>How I spend my time at restaurants</h3>
+      <p class="sub">(a pie chart I also can't eat)</p>
+      <div class="pie" id="pie" role="img" aria-label="Pie chart: 70% interrogating the waiter about the fryer, 20% explaining it's not a fad diet, 10% actually eating"></div>
+      <ul class="legend">
+        <li><i style="background:var(--chili)"></i><b>70%</b> Interrogating the waiter about the fryer</li>
+        <li><i style="background:var(--haldi)"></i><b>20%</b> Explaining it's not a fad diet</li>
+        <li><i style="background:var(--navy)"></i><b>10%</b> Actually eating</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="scribble">what you'll find on the gram</p>
+      <h2>Your gluten-free bestie</h2>
+    </div>
+    <div class="grid4">
+      <article class="card do reveal"><div class="emo" style="background:var(--plate)">🍽️</div><h3>Restaurant reviews</h3><p>Honest takes on where celiacs can actually eat in Delhi and beyond, and where to skip.</p></article>
+      <article class="card do reveal"><div class="emo" style="background:var(--haldi)">🥘</div><h3>Desi plates</h3><p>Dhokla, poha, bhel, paneer tikka, ladoos. Proof that gluten-free desi food is anything but boring.</p></article>
+      <article class="card do reveal"><div class="emo" style="background:var(--rose)">😤</div><h3>Memes</h3><p>For every time a menu says "gluten-free" and then serves it with a naan.</p></article>
+      <article class="card do reveal"><div class="emo" style="background:#BFE8C7">🛡️</div><h3>Precautions</h3><p>Shared fryers, hidden hing, soy sauce. The sneaky stuff, explained simply.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="quiz-sec" id="quiz">
+  <div class="wrap">
+    <div class="section-head reveal" style="margin-inline:auto;text-align:center">
+      <p class="scribble" style="color:var(--ink)">test your desi celiac IQ</p>
+      <h2>Gluten ya nahi?</h2>
+      <p>Guess if each one is safe for a celiac. Some of these trip up even the aunties.</p>
+    </div>
+    <div class="card quiz reveal" id="quizCard">
+      <div class="q-top"><span id="qCount">1 / 10</span><span id="qScore">Score: 0 🌟</span></div>
+      <div class="q-food" id="qFood">🫓</div>
+      <div class="q-name" id="qName">Roti</div>
+      <p class="q-hint" id="qHint">The everyday classic</p>
+      <div class="q-btns">
+        <button class="btn safe" data-a="safe">✅ Safe</button>
+        <button class="btn risky" data-a="risky">🤔 Depends</button>
+        <button class="btn gluten" data-a="gluten">❌ Gluten!</button>
+      </div>
+      <div class="q-result" id="qResult" aria-live="polite">
+        <h4 id="qVerdict"></h4>
+        <p id="qWhy"></p>
+        <button class="btn dark q-next" id="qNext">Next →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="myths">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="scribble">things people have actually said to me</p>
+      <h2>Myth vs. fact</h2>
+      <p>Tap a card to flip it.</p>
+    </div>
+    <div class="flips">
+      <button class="flip reveal" aria-label="Flip card">
+        <div class="inner">
+          <div class="face front"><span class="lbl">Myth</span><q>Thoda sa kha lo, kuch nahi hoga</q><small>tap to flip ↻</small></div>
+          <div class="face back"><span class="lbl">Fact</span><p>Celiac is an autoimmune disease. Even a tiny amount of gluten damages the gut, whether or not you feel it right away. So no, not even "thoda sa".</p><small>↻</small></div>
+        </div>
+      </button>
+      <button class="flip reveal" aria-label="Flip card">
+        <div class="inner">
+          <div class="face front"><span class="lbl">Myth</span><q>Gluten-free is just a trendy diet</q><small>tap to flip ↻</small></div>
+          <div class="face back"><span class="lbl">Fact</span><p>For celiacs it isn't a lifestyle choice. It's the only treatment there is. There's no pill, just a very careful plate.</p><small>↻</small></div>
+        </div>
+      </button>
+      <button class="flip reveal" aria-label="Flip card">
+        <div class="inner">
+          <div class="face front"><span class="lbl">Myth</span><q>Just pick the croutons off</q><small>tap to flip ↻</small></div>
+          <div class="face back"><span class="lbl">Fact</span><p>Cross-contamination is real. Shared fryers, tawas, ladles and chopping boards can all make a "gluten-free" dish unsafe.</p><small>↻</small></div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="intro reveal">
+      <p class="scribble" style="color:var(--haldi)">let's be friends 💌</p>
+      <h2>Slide into my <span>inbox</span></h2>
+      <p>Have a gluten-free product, a PR package, a restaurant I should try, or a celiac question? Tell me about it here.</p>
+      <ul class="who">
+        <li><span>📦</span><div><b>PR packages</b><p>Gluten-free snacks, flours and treats are always welcome.</p></div></li>
+        <li><span>🤝</span><div><b>Brand collabs</b><p>Food brands with gluten-free products: let's make something fun together.</p></div></li>
+        <li><span>🍴</span><div><b>Restaurants</b><p>Have a celiac-safe menu? I'd love to come try it.</p></div></li>
+        <li><span>🌾</span><div><b>Fellow celiacs</b><p>Newly diagnosed or just need to vent? Say hi.</p></div></li>
+      </ul>
+      <div class="direct">
+        <p>Not a form person? Reach me directly:</p>
+        <div class="direct-links">
+          <a class="pill wa" href="https://wa.me/917503765007" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="pill" href="tel:+917503765007">📞 +91 75037 65007</a>
+          <a class="pill" href="mailto:thedesiceliac@gmail.com">✉️ thedesiceliac@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <form class="card reveal" id="contactForm" novalidate>
+      <!-- 👇 Paste your Web3Forms access key here (see README.md) -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New message from The Desi Celiac website 🌾">
+      <input type="hidden" name="from_name" value="The Desi Celiac website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <span style="font-weight:700;font-size:.92rem">What's this about?</span>
+        <div class="chips" role="radiogroup" aria-label="Message type">
+          <input type="radio" name="topic" id="t1" value="PR package" checked><label for="t1">📦 PR package</label>
+          <input type="radio" name="topic" id="t2" value="Brand collab"><label for="t2">🤝 Brand collab</label>
+          <input type="radio" name="topic" id="t3" value="Restaurant"><label for="t3">🍴 Restaurant</label>
+          <input type="radio" name="topic" id="t4" value="Celiac question"><label for="t4">🌾 Celiac Q</label>
+          <input type="radio" name="topic" id="t5" value="Just saying hi"><label for="t5">👋 Just hi</label>
+        </div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" required autocomplete="name" placeholder="Priya Sharma"></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" placeholder="you@brand.com"></div>
+      </div>
+      <div class="field"><label for="brand">Brand / Instagram handle <em>(optional)</em></label><input id="brand" name="brand_or_handle" placeholder="@yourbrand"></div>
+      <div class="field"><label for="msg">Your message</label><textarea id="msg" name="message" required placeholder="Tell me what you've got! 🍪"></textarea></div>
+      <button class="btn chili" type="submit" id="sendBtn">Send it 🚀</button>
+      <p class="form-note">Comes straight to my inbox. I usually reply within a few days.</p>
+      <div class="form-status" id="formStatus" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="big">Made with 0% gluten in Delhi 🧡</div>
+      <small>© <span id="yr"></span> The Desi Celiac</small>
+    </div>
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <a href="https://www.instagram.com/thedesiceliac/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://wa.me/917503765007" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <a href="mailto:thedesiceliac@gmail.com">Email ↗</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* rotating plate */
+const foods = ['🍛','🥘','🍚','🥗','🍢','🍮','🌮','🍳'];
+let fi = 0;
+setInterval(()=>{ fi=(fi+1)%foods.length; document.getElementById('plateFood').textContent = foods[fi]; }, 2200);
+
+/* reveal on scroll + pie animation */
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){ e.target.classList.add('in'); if(e.target.querySelector('#pie')) document.getElementById('pie').classList.add('go'); io.unobserve(e.target); }
+}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* flip cards */
+document.querySelectorAll('.flip').forEach(f=>f.addEventListener('click',()=>f.classList.toggle('on')));
+
+/* quiz */
+const Q = [
+  {f:'🫓',n:'Roti',h:'The everyday classic',a:'gluten',w:'Atta is wheat flour. Classic roti is a hard no.'},
+  {f:'🥞',n:'Plain dosa',h:'South Indian sunshine',a:'risky',w:'Rice and urad dal are naturally gluten-free, but some batters have rava or wheat added, and the tawa is often shared with wheat dishes. Always ask!'},
+  {f:'🧽',n:'Dhokla',h:'Spongy besan goodness',a:'risky',w:'Besan is gluten-free, but most compounded hing in the tadka has wheat flour in it. Look for gluten-free hing.'},
+  {f:'🍚',n:'Poha',h:'Breakfast of champions',a:'safe',w:'Flattened rice is naturally gluten-free. Just check any namkeen or sev you put on top.'},
+  {f:'🍮',n:'Suji halwa',h:'Mummy\'s comfort dessert',a:'gluten',w:'Suji (semolina) is made from wheat, so it has gluten.'},
+  {f:'⚪',n:'Sabudana khichdi',h:'Navratri favourite',a:'safe',w:'Tapioca pearls are naturally gluten-free. Fasting food often turns out to be celiac food too.'},
+  {f:'🔺',n:'Samosa',h:'Monsoon must-have',a:'gluten',w:'The crispy shell is maida, which is refined wheat flour. Sorry 💔'},
+  {f:'🥢',n:'Soy sauce',h:'Indo-Chinese essential',a:'gluten',w:'Regular soy sauce is brewed with wheat. Use tamari labelled gluten-free instead.'},
+  {f:'🌽',n:'Makki ki roti',h:'With sarson ka saag',a:'risky',w:'Pure makki atta is gluten-free, but many cooks mix in wheat atta to make it easier to roll. Check before you eat!'},
+  {f:'🍟',n:'Restaurant fries',h:'Just potatoes, right?',a:'risky',w:'The potatoes are fine, but a shared fryer with breaded stuff makes them unsafe. Hence the 70% of my pie chart 😅'}
+];
+const labels = {safe:'✅ Safe',risky:'🤔 Depends',gluten:'❌ Gluten!'};
+let qi=0, score=0;
+const $ = id=>document.getElementById(id);
+const btns = document.querySelectorAll('.q-btns .btn');
+function showQ(){
+  const q=Q[qi];
+  $('qFood').textContent=q.f; $('qName').textContent=q.n; $('qHint').textContent=q.h;
+  $('qCount').textContent=`${qi+1} / ${Q.length}`;
+  $('qResult').classList.remove('show'); btns.forEach(b=>b.disabled=false);
+}
+btns.forEach(b=>b.addEventListener('click',()=>{
+  const q=Q[qi], right=b.dataset.a===q.a;
+  if(right) score++;
+  $('qScore').textContent=`Score: ${score} 🌟`;
+  $('qVerdict').textContent = right ? 'Sahi jawab! 🎉' : `Arre nahi! It's ${labels[q.a]}`;
+  $('qWhy').textContent=q.w;
+  $('qNext').textContent = qi===Q.length-1 ? 'See my score →' : 'Next →';
+  $('qResult').classList.add('show'); btns.forEach(x=>x.disabled=true);
+}));
+$('qNext').addEventListener('click',()=>{
+  if(qi<Q.length-1){ qi++; showQ(); return; }
+  const msg = score>=9 ? ['👑','Certified Celiac Pro','You could interrogate a waiter in your sleep.']
+            : score>=6 ? ['🌟','Gluten Detective','Pretty sharp! Hidden hing still gets the best of us.']
+            : ['🌾','Gluten Rookie','No worries. Follow along and you\'ll be a pro in no time.'];
+  $('qFood').textContent=msg[0]; $('qName').textContent=msg[1];
+  $('qHint').textContent=`${score}/${Q.length}. ${msg[2]}`;
+  $('qResult').classList.remove('show'); btns.forEach(x=>x.disabled=true);
+  if(score>=6) confetti();
+  qi=0; score=0;
+  setTimeout(()=>{ $('qResult').classList.add('show'); $('qVerdict').textContent='Play again?'; $('qWhy').textContent='Share your score in my DMs 😉'; $('qNext').textContent='Restart ↻';
+    $('qNext').onclick=()=>{ $('qNext').onclick=null; $('qScore').textContent='Score: 0 🌟'; showQ(); };
+  },400);
+});
+
+function confetti(){
+  const e=['🎉','🌾','✨','🍛','🥳','💛'];
+  for(let i=0;i<36;i++){
+    const s=document.createElement('span'); s.className='confetti';
+    s.textContent=e[i%e.length]; s.style.left=Math.random()*100+'vw';
+    s.style.animationDuration=(2+Math.random()*2)+'s'; s.style.animationDelay=Math.random()*.5+'s';
+    document.body.appendChild(s); setTimeout(()=>s.remove(),5000);
+  }
+}
+
+/* contact form → Web3Forms → thedesiceliac@gmail.com */
+const form=$('contactForm'), status=$('formStatus'), sendBtn=$('sendBtn');
+form.addEventListener('submit', async ev=>{
+  ev.preventDefault();
+  status.className='form-status';
+  if(!form.checkValidity()){ status.textContent='Oops! Please add your name, a valid email and a message 🙏'; status.classList.add('err'); return; }
+  const data=new FormData(form);
+  data.set('subject', `[${data.get('topic')}] New message from ${data.get('name')} 🌾`);
+  if(data.get('access_key').startsWith('YOUR_')){
+    // Not set up yet: fall back to opening the visitor's email app
+    const body=`Topic: ${data.get('topic')}\nName: ${data.get('name')}\nEmail: ${data.get('email')}\nBrand/Handle: ${data.get('brand_or_handle')}\n\n${data.get('message')}`;
+    location.href=`mailto:thedesiceliac@gmail.com?subject=${encodeURIComponent(data.get('subject'))}&body=${encodeURIComponent(body)}`;
+    return;
+  }
+  sendBtn.disabled=true; sendBtn.textContent='Sending… 🛵';
+  try{
+    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{Accept:'application/json'},body:data});
+    const j=await r.json();
+    if(!j.success) throw new Error(j.message);
+    status.textContent='Message delivered! 🎉 I\'ll get back to you soon.'; status.classList.add('ok');
+    form.reset(); confetti();
+  }catch(err){
+    status.innerHTML='Hmm, that didn\'t go through 😕 Please email me at <a href="mailto:thedesiceliac@gmail.com">thedesiceliac@gmail.com</a>';
+    status.classList.add('err');
+  }finally{ sendBtn.disabled=false; sendBtn.textContent='Send it 🚀'; }
+});
+</script>
+</body>
+</html>
