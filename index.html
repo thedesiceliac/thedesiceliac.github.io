@@ -7,7 +7,9 @@
 <meta name="description" content="The Desi Celiac — gluten free food in India, without the guesswork. Restaurant reviews, recipes, memes and brand collabs from Delhi.">
 <meta property="og:title" content="The Desi Celiac | Gluten Free India">
 <meta property="og:description" content="Living with celiac since '91. Gluten free food, without the guesswork!">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+<meta property="og:image" content="https://thedesiceliac.github.io/logo-512.png">
+<link rel="icon" type="image/png" href="logo-64.png">
+<link rel="apple-touch-icon" href="logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
@@ -57,7 +59,7 @@
   nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cream) 88%,transparent);backdrop-filter:blur(8px);border-bottom:2.5px solid var(--ink)}
   nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0}
   .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-  .brand svg{width:46px;height:46px}
+  .brand img{width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ink)}
   .brand b{font-family:"Anton",sans-serif;font-weight:400;font-size:1.25rem;letter-spacing:.5px;text-transform:uppercase}
   .nav-links{display:flex;gap:6px;align-items:center}
   .nav-links a.txt{text-decoration:none;font-weight:600;padding:8px 12px;border-radius:999px}
@@ -65,7 +67,7 @@
   .nav-links .btn{padding:11px 18px;box-shadow:3px 3px 0 var(--ink)}
   .nav-links .btn{white-space:nowrap}
   @media (max-width:760px){.nav-links a.txt{display:none}.brand b{font-size:1.05rem;line-height:1}.nav-links .btn{padding:10px 14px;font-size:.92rem}}
-  @media (max-width:400px){.brand b{font-size:.95rem}.brand svg{width:40px;height:40px}}
+  @media (max-width:400px){.brand b{font-size:.95rem}.brand img{width:40px;height:40px}}
 
   /* ---------- hero ---------- */
   .hero{padding:56px 0 70px;position:relative}
@@ -260,24 +262,11 @@
 </head>
 <body>
 
-<!-- Logo badge (swap for your real logo: replace this <symbol> or use <img src="logo.png">) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="badge" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="44" fill="#1B1B1B"/>
-    <circle cx="50" cy="50" r="45" fill="none" stroke="#1B1B1B" stroke-width="7" stroke-dasharray="0.1 6.2" stroke-linecap="round"/>
-    <circle cx="50" cy="50" r="37" fill="none" stroke="#FFF6E9" stroke-width="1.6"/>
-    <text x="50" y="28" text-anchor="middle" fill="#FFF6E9" font-size="7">★ ★ ★</text>
-    <text x="50" y="38" text-anchor="middle" fill="#FFF6E9" font-family="Anton,Impact,sans-serif" font-size="9">THE</text>
-    <rect x="17" y="42" width="66" height="18" fill="#FFF6E9"/>
-    <text x="50" y="57.5" text-anchor="middle" fill="#1B1B1B" font-family="Anton,Impact,sans-serif" font-size="16" letter-spacing="1">DESI</text>
-    <text x="50" y="73" text-anchor="middle" fill="#FFF6E9" font-family="Anton,Impact,sans-serif" font-size="10" letter-spacing="1">CELIAC</text>
-  </symbol>
-</svg>
 
 <nav>
   <div class="wrap">
     <a class="brand" href="#top" aria-label="The Desi Celiac home">
-      <svg><use href="#badge"/></svg>
+      <img src="logo-180.png" alt="" width="46" height="46">
       <b>The Desi Celiac</b>
     </a>
     <div class="nav-links">
@@ -435,8 +424,8 @@
     </div>
 
     <form class="card reveal" id="contactForm" novalidate>
-      <!-- 👇 Paste your Web3Forms access key here (see README.md) -->
-      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <!-- Web3Forms access key (public by design): sends messages to thedesiceliac@gmail.com -->
+      <input type="hidden" name="access_key" value="1301310a-3618-4764-9dd5-166e35b734d5">
       <input type="hidden" name="subject" value="New message from The Desi Celiac website 🌾">
       <input type="hidden" name="from_name" value="The Desi Celiac website">
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
